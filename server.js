@@ -10,16 +10,36 @@ server.connection({
     port: 3000
 })
 
-// TDD add routes to a server to accept requests
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: (request, reply) => {
-        const query = request.query
+let goodOptions = {
+    reporters: [{
+        reporter: require('good-console'),
+        events: {log: '*', response: '*'}
+    }]
+}
 
-        reply('it works :)')
-    }
+server.register({
+    register: require('good'),
+    options: goodOptions
+}, err => {
+    server.route({
+        method: 'GET',
+        path: '/',
+        handler: (request, reply) => {
+            server.log('error','Oh no!')
+            server.log('info', 'replying')
+            reply('hello hapi')
+        }
+    })
+
+    server.route({
+        method: 'GET',
+        path: '/{name}',
+        handler: (request, reply) => {    
+            reply(`hello ${request.params.name}`)
+        }
+    })
+    
+    server.start(() => console.log('Server started at: ', server.info.uri))
+    
 })
-
-server.start(() => console.log('Server started at: ', server.info.uri))
   
