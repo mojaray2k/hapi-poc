@@ -4,6 +4,8 @@
   "description": "This is a proof of concept of how to use hapi in node applications",
   "main": "server.js",
   "dependencies": {
+    "good": "^8.1.0",
+    "good-console": "^7.1.0",
     "hapi": "^13.5.2"
   },
   "devDependencies": {},

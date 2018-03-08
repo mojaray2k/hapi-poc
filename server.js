@@ -14,18 +14,12 @@ server.connection({
 server.route({
     method: 'GET',
     path: '/',
-    handler: function(request, reply){
+    handler: (request, reply) => {
         const query = request.query
 
         reply('it works :)')
     }
 })
 
-server.start(function(err){
-    if(err){
-        throw err
-    }
-
-    console.log('Server started at: ', server.info.uri)
-})
+server.start(() => console.log('Server started at: ', server.info.uri))
   
