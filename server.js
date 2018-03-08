@@ -13,7 +13,7 @@ server.connection({
 let goodOptions = {
     reporters: [{
         reporter: require('good-console'),
-        events: {log: '*', response: '*'}
+        events: {log: ['error'], response: '*'}
     }]
 }
 
