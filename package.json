@@ -6,7 +6,8 @@
   "dependencies": {
     "good": "6.4.0",
     "good-console": "^5.1.0",
-    "hapi": "^13.5.2"
+    "hapi": "^13.5.2",
+    "inert": "4.2.1"
   },
   "devDependencies": {},
   "scripts": {
