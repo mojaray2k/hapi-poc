@@ -15,7 +15,9 @@ server.route({
     method: 'GET',
     path: '/',
     handler: function(request, reply){
-        reply('Hello Hapi')
+        const query = request.query
+
+        reply('it works :)')
     }
 })
 
