@@ -2,9 +2,9 @@
   "name": "hapi-poc",
   "version": "1.0.0",
   "description": "This is a proof of concept of how to use hapi in node applications",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
-    "hapi": "^17.2.2"
+    "hapi": "^13.5.2"
   },
   "devDependencies": {},
   "scripts": {
