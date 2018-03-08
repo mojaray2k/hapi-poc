@@ -13,6 +13,7 @@ server.register(require('vision'), () => {
             hbs: require('handlebars')
         },
         relativeTo: __dirname,
+        layout: true,
         path: 'views'
     })
 
