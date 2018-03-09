@@ -5,7 +5,7 @@ const Boom = require('boom')
 
 const server = new Hapi.Server()
 
-server.connection({ host: 'localhost', port: 8001 })
+server.connection({ port: 8001 })
 
 server.route({
     method: 'GET',

@@ -5,7 +5,8 @@ const Path = require('path')
 
 const server = new Hapi.Server()
 
-server.connection({ host: 'localhost', port: 8001 })
+server.connection({ port: 8001 })
+
 server.register(require('inert'), () => {
 
     // server.route({
